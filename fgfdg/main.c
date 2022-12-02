@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL,"RUS");
+    char masked_raider[] = "Живой!";
+    char *jimmy = masked_raider;
+    printf("Грабитель в маске сейчас %s Евгений сейчас %s\n", masked_raider, jimmy);
+    masked_raider[0] = 'М';
+    masked_raider[1] = 'Ё';
+    masked_raider[2] = 'Р';
+    masked_raider[3] = 'Т';
+    masked_raider[4] = 'В';
+    masked_raider[5] = '!';
+    printf("Грабитель в маске сейчас %s Евгений сейчас %s\n", masked_raider, jimmy);
+
+    return 0;
+}
